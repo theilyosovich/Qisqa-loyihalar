@@ -19,9 +19,11 @@ Dastur foydalanuvchi tomonidan kiritilgan **AQI** qiymatiga qarab havo sifatini 
 
 
 1. Foydalanuvchi AQI (havo ifloslanish darajasi) qiymatini kiritadi.
-   
+
+
 
 2\. Kiritilgan qiymat maxsus funksiya orqali tekshiriladi.
+
 
 
 3\. Funksiya AQI oralig‘iga mos ravishda havo holatini aniqlaydi va tavsiyalar beradi:
@@ -37,6 +39,7 @@ Dastur foydalanuvchi tomonidan kiritilgan **AQI** qiymatiga qarab havo sifatini 
 
 
 4\. Natija ekranga chiqariladi.
+
 
 
 5\. Foydalanuvchi xohlasa, dasturni qayta ishlatishi mumkin.
