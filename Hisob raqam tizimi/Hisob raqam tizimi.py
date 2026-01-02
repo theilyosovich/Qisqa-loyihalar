@@ -8,22 +8,23 @@ Amaliyot sanasi: 2026-yil, 2-yanvar
 GitHub profil: https://github.com/theilyosovich
 
 """
-# Consoledagi ma'lumotlarni tozalash kodi yozishni boshladni
+#Consoledagi ma'lumotlarni tozalash kodi boshlandi
 import os
 
 def clear_console(): 
     os.system('cls')
 clear_console( )
-# Consoledagi ma'lumotlarni tozalash kodi yozishni tugadi.
+#Consoledagi ma'lumotlarni tozalash kodi tugadi
 
+#Boshlangich ma'lumotlar qismi boshlandi
 xaqiqiy_hisob_raqam=123123123
 balance=0
 history=[]
-    
+#Boshlangich ma'lumotlar qismi tugadi   
 
 print("""\nBank tizimiga xush kelibsiz!""")
 
-#   Hisob raqamini tasdiqlash qismi boshlandi
+#Hisob raqamini tasdiqlash qismi boshlandi
 def Hisob_raqamni_tasdiqlash(haqiqiy_raqam):
    
     while True:
@@ -41,11 +42,11 @@ def Hisob_raqamni_tasdiqlash(haqiqiy_raqam):
             continue
         
         if hisob_raqam_kiritish == haqiqiy_raqam:     # 3-Tekshiruv
-            print("\nTizimga muvaffaqqiyatli kirdingiz!")
+            print("\n✅Tizimga muvaffaqqiyatli kirdingiz!")
             return hisob_raqam_kiritish
         else:
             print(f"\nKechirasiz, \"{hisob_raqam_kiritish}\" hisob raqami aniqlanmadi. Qaytadan urinib ko'ring.")
-#   Hisob raqamini tasdiqlash qismi tugadi
+#Hisob raqamini tasdiqlash qismi tugadi
 
 #Balansni ko'rsatish qismi boshlandi
 def balansni_tekshir():
@@ -71,7 +72,7 @@ def pul_kirit():
             print("\nNoto'g'ri format: Iltimos, faqat son kiriting! ")
     balance=balance + miqdor
     history.append({"turi":"KIRIM","miqdor":miqdor})
-    print(f"\n✅Balansingizga {miqdor} muvaffaqqiyatli qo'shildi. Joriy balans: {balance} so'm")
+    print(f"\n✅Balansingizga {miqdor} muvaffaqqiyatli qo'shildi. \n💰Joriy balans: {balance} so'm")
 #Hisobga pul qo'shish qismi tugadi
 
 #Hisobdan pul chiqarish qismi boshlandi
@@ -81,7 +82,7 @@ def pul_chiqar():
     
     while True:
        try:
-           miqdor=int(input("\nChiqarib bo'lgan miqdoringizni kiriting: "))
+           miqdor=int(input("\nChiqarib olmoqchi bo'lgan miqdoringizni kiriting: "))
            if miqdor <= 0:
                print("\nNoto'g'ri miqdor. Musbat son kiriting: ")
                continue
@@ -93,7 +94,7 @@ def pul_chiqar():
            
            balance=balance - miqdor
            history.append({"turi":"CHIQIM","miqdor":miqdor})
-           print(f"\n✅Balansingizdan {miqdor} so'm yechildi. Joriy balans: {balance}")
+           print(f"\n✅Balansingizdan {miqdor} so'm yechildi. \n💰Joriy balans: {balance}")
            break
        except ValueError:
            print("\nNoto'g'ri format.Iltimos faqat son kiriting: ")
@@ -113,10 +114,10 @@ def amaliyotlar_tarixini_tekshir():
         miqdor=qism['miqdor']
         
         if turi == "KIRIM":
-            print(f"  ➕ Pul kirdi: ={miqdor} so'm")
+            print(f"  ➕ Pul kirdi: = {miqdor} so'm")
         elif turi == "CHIQIM":
-            print(f"  ➖ Pul chiqdi: ={miqdor} so'm")
-    print(f"Joriy balans: {balance} so'm")
+            print(f"  ➖ Pul chiqdi: = {miqdor} so'm")
+    print(f"\n💰Joriy balans: {balance} so'm")
 #Amaliyot tarixini ko'rish qismi tugadi
 
 #Tizimdan chiqish qismi boshlandi
